@@ -21,7 +21,7 @@
 
 ### About me
 
-I just completed my **M.Eng. in Artificial Intelligence** at Deggendorf Institute of Technology (THD), where my thesis built a complete real-time **Human-Robot Interaction framework on a UR3e cobot** in ROS 2 and MoveIt 2 — hybrid admittance control, ISO/TS 15066 safety, YOLOv8-based human exclusion, RealSense D435i perception, and a 13-state FSM for assistive manipulation.
+I just completed my **M.Eng. in Artificial Intelligence** at Deggendorf Institute of Technology (THD), where my thesis built a complete real-time **Human-Robot Interaction framework on a UR3e cobot** in ROS 2 and MoveIt 2 - hybrid admittance control, ISO/TS 15066 safety, YOLOv8-based human exclusion, RealSense D435i perception, and a 13-state FSM for assistive manipulation.
 
 Before AI I spent ~3 years in industry as an Electrical/Project Engineer and Operations Associate, which taught me to ship things that survive contact with reality, not just demo. Now I want to apply that mindset to robotics and physical AI.
 
