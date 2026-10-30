@@ -1,8 +1,8 @@
 <h1 align="center">Hi, I'm Nishanth Sundaran</h1>
 
 <p align="center">
-  <b>AI Master's graduate · Robotics, perception, and applied ML in Germany</b><br>
-  <i>ROS 2 · MoveIt 2 · Multimodal AI · Force-feedback control · Computer Vision</i>
+  <b>Robotics and AI engineer in Germany · robot learning, humanoids, safe human-robot interaction</b><br>
+  <i>ROS 2 · MoveIt 2 · MuJoCo / MJX · Imitation and reinforcement learning · Vision-language(-action) models</i>
 </p>
 
 <p align="center">
@@ -21,45 +21,47 @@
 
 ### About me
 
-I just completed my **M.Eng. in Artificial Intelligence** at Deggendorf Institute of Technology (THD), where my thesis built a complete real-time **Human-Robot Interaction framework on a UR3e cobot** in ROS 2 and MoveIt 2 - hybrid admittance control, ISO/TS 15066 safety, YOLOv8-based human exclusion, RealSense D435i perception, and a 13-state FSM for assistive manipulation.
+I completed my **M.Eng. in Artificial Intelligence** at TH Deggendorf (June 2026). My thesis put a complete human-robot interaction stack on a **real UR3e cobot** in ROS 2 and MoveIt 2: 500 Hz admittance control, an ISO/TS 15066 safety layer and YOLOv8 human perception.
 
-Before AI I spent ~3 years in industry as an Electrical/Project Engineer and Operations Associate, which taught me to ship things that survive contact with reality, not just demo. Now I want to apply that mindset to robotics and physical AI.
+Since then I work on putting learned intelligence on top of robots while keeping safety in its own layer: a local vision-language model that drives two different humanoids, a G1 policy trained from human motion capture, and benchmarks of vision-language-action models. I care most about whether the numbers are true, and my READMEs report what does not work as carefully as what does.
 
-Based in Bavaria, open to relocation across Germany. EU Blue Card route, available immediately.
+Based in Bavaria, available immediately for robotics and AI roles in Germany, full-time or as a full-time internship leading to a permanent position.
 
 ---
 
 ### Featured projects
 
-| Project | Stack | What it does |
+| Project | Stack | What it shows |
 |---|---|---|
-| [Human-Robot Interaction with Force Feedback](https://github.com/NishanthSundaran/Human-Robot-Interaction-with-Force-Feedback-in-Collaborative-Tasks) | ROS 2 · MoveIt 2 · YOLOv8 · RealSense D435i · UR3e · Robotiq | Master's thesis: hybrid admittance control + safety-rated perception for assistive manipulation. Full sim + hardware paths, demo video. |
-| [embodied_agent](https://github.com/NishanthSundaran/embodied_agent) | Anthropic Messages API · Claude VLM · ROS 2 · MoveIt 2 | Agentic pick-and-place: VLM grounds objects in RGB+depth, 8-tool tool-use loop drives a UR3e through natural language commands. |
-| [SLAM_nav_bot](https://github.com/NishanthSundaran/SLAM_nav_bot) | ROS · Gazebo · SLAM · SolidWorks | Four-wheeled mobile robot with SLAM-based autonomous navigation in cluttered environments. |
-| [AQI_prediction](https://github.com/NishanthSundaran/AQI_prediction) | Python · ARIMA · SARIMA · scikit-learn | Multi-city air-quality time-series forecasting at over 93% test accuracy. |
+| [one-brain-many-bodies](https://github.com/NishanthSundaran/one-brain-many-bodies) | MuJoCo · Qwen2.5-VL · PPO · differential IK | A local VLM plans through typed tool calls at ~1 Hz while a compliant whole-body controller runs at ~500 Hz; the same brain drives the Unitree G1 and H1. Measured human-likeness, IK vs learned reaching, and documented negative results. |
+| [g1-motion-imitation](https://github.com/NishanthSundaran/g1-motion-imitation) | JAX / MJX · PPO · LocoMuJoCo · LAFAN1 | DeepMimic-style imitation of human motion capture on the G1 at ~30,000 steps/s on a 6 GB laptop GPU; gait within 2 to 7% of the human on four metrics, with the limitations stated. |
+| VLA benchmark on LIBERO *(in progress)* | LeRobot · SmolVLA · ACT · Diffusion Policy | Reproducing SmolVLA: traced a gap to the published result to a MuJoCo rendering change and to open-loop action chunks; replanning reached 97% on held-out scenes without retraining. |
+| [Human-Robot Interaction with Force Feedback](https://github.com/NishanthSundaran/Human-Robot-Interaction-with-Force-Feedback-in-Collaborative-Tasks) | ROS 2 · MoveIt 2 · YOLOv8 · RealSense D435i · UR3e | Master's thesis: hybrid admittance control, concurrent ISO/TS 15066 safety and human-aware perception, validated on real hardware (4 of 5 assistive-lift trials, peak contact under 21 N). |
+| [nishanth_cartesian_admittance_controller](https://github.com/NishanthSundaran/nishanth_cartesian_admittance_controller) | C++ · ros2_control | Cartesian admittance controller plugin at 500 Hz with no memory allocation in the update loop and a damped least-squares Jacobian. |
+| [embodied_agent](https://github.com/NishanthSundaran/embodied_agent) | Claude tool use · ROS 2 · MoveIt 2 · Gazebo | Natural-language pick-and-place: a VLM grounds objects in RGB-D, an 8-tool loop plans, a safety gate checks every action. |
+| [SLAM_nav_bot](https://github.com/NishanthSundaran/SLAM_nav_bot) | ROS 2 Humble · slam_toolbox · Nav2 | LiDAR mobile robot with online SLAM and a full Nav2 stack; 3 of 3 goals, 0 collisions in a cluttered warehouse simulation. |
 
 ---
 
 ### What I work with
 
 ```
-Robotics       ROS 2 (Humble) · MoveIt 2 · MoveIt Servo · ros2_control · tf2 · Gazebo / Ignition · URDF/Xacro
-Perception     OpenCV · YOLOv8 · Intel RealSense D435i · Hand-eye calibration · Point clouds · Multimodal RGB+D
-AI / ML        PyTorch · TensorFlow · Scikit-learn · Reinforcement Learning · Multimodal VLMs · Tool-use agents
-Control        Hybrid position-admittance · Force/torque sensing · OMPL · Pilz · Real-time loops
-Languages      Python (daily) · C/C++ · CMake · Linux (Ubuntu 22.04) · Docker · Git
-Standards      ISO/TS 15066 (SSM · PFL · Hand guiding) · Functional Safety
+Robot learning  Imitation learning · PPO · reward and evaluation design · LeRobot (ACT, Diffusion Policy, SmolVLA)
+Simulation      MuJoCo · MJX · LocoMuJoCo · LIBERO · Gazebo
+Robotics        ROS 2 (Humble) · MoveIt 2 · MoveIt Servo · ros2_control · tf2 · URDF/Xacro
+Models          Vision-language models as planners (Qwen2.5-VL, Claude) · YOLOv8 · PyTorch · JAX
+Perception      OpenCV · Intel RealSense D435i · hand-eye calibration · point clouds
+Control/Safety  Admittance control · force/torque sensing · ISO/TS 15066 (SSM, PFL, hand guiding)
+Software        Python · C++ · CMake · Git · Linux · pytest
 ```
 
 ---
 
 ### Currently
 
-- Open to **junior / mid robotics, perception, or applied ML roles** in Germany (full-time or intern-to-perm conversion).
-- Building C++ ports of selected thesis components to deepen production-grade development practice.
-- Improving German from A2 toward B1 in 2026.
-
-If you are hiring in robotics or physical AI and the projects above look interesting, **reach out**. I respond fast and bring a demo.
+- Benchmarking SmolVLA, ACT and Diffusion Policy on LIBERO.
+- Open to robotics software, robot learning and embodied AI roles in Germany.
+- Improving German from A2 toward B1.
 
 <p align="center">
   <i>"Build for hardware, document for humans, ship for reality."</i>
